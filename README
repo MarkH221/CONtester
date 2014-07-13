@@ -1,0 +1,6 @@
+CONtester - STFS management utility
+===============
+
+A tool to utilise the isolib.dll for the purpose of manipulating CON files with a priority on file management.
+Accepts drag & drop operations in addition to opening CON files from the menu.
+Fully functional rehash & resign feature.
