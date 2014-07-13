@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      # windows-2022 ships the .NET Framework 4.8 targeting pack and VS MSBuild.
+      - uses: microsoft/setup-msbuild@v3
+
+      - name: Build (Release)
+        run: msbuild CONTester.slnx /t:Build /p:Configuration=Release /v:minimal /nologo
+
+      - name: Verify outputs
+        shell: pwsh
+        run: |
+          $required = @(
+            'CONTester\bin\Release\CONtester.exe',
+            'CONTester\bin\Release\CONtester.exe.config',
+            'CONTester\bin\Release\ISOLib.dll'
+          )
+          foreach ($file in $required) {
+            if (-not (Test-Path $file)) { throw "Missing build output: $file" }
+          }
+          Get-Item $required | Select-Object Name, Length | Format-Table -AutoSize
+
+      - name: Upload build output
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: CONtester-build
+          path: |
+            CONTester/bin/Release/CONtester.exe
+            CONTester/bin/Release/CONtester.exe.config
+            CONTester/bin/Release/ISOLib.dll
+          if-no-files-found: error

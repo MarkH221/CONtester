@@ -1,0 +1,31 @@
+CONtester - STFS management utility
+===============
+
+A tool for manipulating Xbox 360 CON packages, with a priority on file
+management. Accepts drag & drop operations in addition to opening CON files
+from the menu, and has a rehash & resign feature.
+
+The library
+-----------
+
+ISOLib now lives in this repository as source under `ISOLib/` and is built as
+part of `CONTester.slnx`. There is no longer a separate binary dependency.
+
+ISOLib was originally written by PureIso and Jappi88. The copy here has been
+retargeted from .NET Framework 2.0 to 4.8 and given a `RWStream.Close(bool)`
+compatibility overload. Original author credits and research credits remain in
+`ISOLib/About.cs`.
+
+Building
+--------
+
+Both projects target .NET Framework 4.8. CONtester builds as AnyCPU by default;
+the solution also has explicit x86 configurations if a 32-bit build is wanted.
+
+    msbuild CONTester.slnx /t:Build /p:Configuration=Release
+
+CI and release workflows live in `.github/workflows`. The release workflow
+builds Release, merges `CONtester.exe` and `ISOLib.dll` with ILMerge into a
+single lean executable, and attaches it to a GitHub release named from the
+assembly version and short commit hash. .NET Framework 4.8 ships with Windows,
+so no separate runtime or framework-dependent bundle is published.

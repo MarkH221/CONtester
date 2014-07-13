@@ -1,0 +1,3239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ISOLib</name>
+    </assembly>
+    <members>
+        <member name="T:Isolib.About">
+            <summary>Contains informations about the library</summary>
+        </member>
+        <member name="P:Isolib.About.Description">
+            <summary>The Description of the DLL</summary>
+        </member>
+        <member name="P:Isolib.About.Legal">
+            <summary>Legal Informations</summary>
+        </member>
+        <member name="P:Isolib.About.Programmer">
+            <summary>DLL Programmer</summary>
+        </member>
+        <member name="P:Isolib.About.Release">
+            <summary>DLL version release dates</summary>
+        </member>
+        <member name="T:Isolib.Account.Encryption">
+            <summary>
+            Account Encryption Class
+            </summary>
+        </member>
+        <member name="T:Isolib.Account.Encryption.ConsoleType">
+            <summary>
+            Console Type
+            </summary>
+        </member>
+        <member name="F:Isolib.Account.Encryption.ConsoleType.Retail">
+            <summary>
+            Retail Console
+            </summary>
+        </member>
+        <member name="F:Isolib.Account.Encryption.ConsoleType.Devkit">
+            <summary>
+            Devkit Console
+            </summary>
+        </member>
+        <member name="M:Isolib.Account.Encryption.DecryptAccount(System.Byte[],Isolib.Account.Encryption.ConsoleType)">
+            <summary>
+            Decrypts Account File
+            </summary>
+            <param name="Account">Account Array</param>
+            <param name="ConsoleType">The console Type, retail or devkit</param>
+            <returns>Decrypted Data</returns>
+        </member>
+        <member name="M:Isolib.Account.Encryption.EncryptAccount(System.Byte[],Isolib.Account.Encryption.ConsoleType)">
+            <summary>
+            Encrypt Account Data
+            </summary>
+            <param name="Account">Account Array</param>
+            <param name="ConsoleType">The console Type, retail or devkit</param>
+            <returns>Encrypted Data</returns>
+        </member>
+        <member name="T:Isolib.Algorithms.Adler32">
+            <summary>Contains funtions to calculate Adler32</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Adler32.Compute(System.Byte[])">
+            <summary>Calculate Adler32</summary>
+            <param name="buffer"> The value that will be calculated</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Adler32.Compute(System.Byte[],System.Int64,System.Int32)">
+            <summary>Calculate Adler32</summary>
+            <param name="value">The Byte Array value</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Adler32.Compute(System.IO.Stream,System.Int64,System.Int32)">
+            <summary>Calculate Adler32</summary>
+            <param name="stream">The data stream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Adler32.Compute(Isolib.IOPackage.RWStream,System.Int64,System.Int32)">
+            <summary>Calculate Adler32 using CRC Tables</summary>
+            <param name="stream">The data RWStream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="T:Isolib.Algorithms.Crc16Ccitt">
+            <summary>CRC16_CCITT Class </summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc16Ccitt.Compute(System.Byte[])">
+            <summary>Computes new hash</summary>
+            <param name="bytes">Bytes to compute</param>
+            <returns>Generated Hash</returns>
+        </member>
+        <member name="T:Isolib.Algorithms.Crc16Ccitt.InitialCrcValue">
+            <summary>/// CCITT Values/// </summary>
+        </member>
+        <member name="F:Isolib.Algorithms.Crc16Ccitt.InitialCrcValue.Zeros">
+            <summary> 0 Value</summary>
+        </member>
+        <member name="F:Isolib.Algorithms.Crc16Ccitt.InitialCrcValue.ValueFfff">
+            <summary> 0xFFFF Value</summary>
+        </member>
+        <member name="F:Isolib.Algorithms.Crc16Ccitt.InitialCrcValue.Value_1D0F">
+            <summary> 0x1D0F Value</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc16Ccitt.#ctor(Isolib.Algorithms.Crc16Ccitt.InitialCrcValue)">
+            <summary>Initialize instance with CCITT Value</summary>
+            <param name="initialValue"> The CCITT Value</param>
+        </member>
+        <member name="T:Isolib.Algorithms.Crc32Bzip2">
+            <summary>Contains funtions to calculate CRC32 BZIP2</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32Bzip2.Compute(System.Byte[])">
+            <summary>Compute CRC32 BZIP2</summary>
+            <param name="bytes"> The value that will be calculated</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32Bzip2.Compute(System.Byte[],System.Int64,System.Int32)">
+            <summary>Calculate CRC32 BZIP2</summary>
+            <param name="value">The Byte Array value</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32Bzip2.Compute(System.IO.Stream,System.Int64,System.Int32)">
+            <summary>Calculate CRC32 BZIP2</summary>
+            <param name="stream">The data stream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32Bzip2.Compute(Isolib.IOPackage.RWStream,System.Int64,System.Int32)">
+            <summary>Calculate CRC32 BZIP using CRC Tables</summary>
+            <param name="stream">The data RWStream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="T:Isolib.Algorithms.Crc32Jam">
+            <summary>Contains funtions to calculate CRC32-JAM</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32Jam.Compute(System.Byte[])">
+            <summary>Calculate CRC32-JAM</summary>
+            <param name="buffer"> The value that will be calculated</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32Jam.Compute(System.Byte[],System.Int64,System.Int32)">
+            <summary>Calculate CRC32-JAM</summary>
+            <param name="value">The Byte Array value</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32Jam.Compute(System.IO.Stream,System.Int64,System.Int32)">
+            <summary>Calculate CRC32-JAM</summary>
+            <param name="stream">The data stream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32Jam.Compute(Isolib.IOPackage.RWStream,System.Int64,System.Int32)">
+            <summary>Calculate CRC32 - JAM using CRC Tables</summary>
+            <param name="stream">The data RWStream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="T:Isolib.Algorithms.Hmacmd5">
+            <summary>Computes a Hash-based Message Authentication Code (HMAC) using the MD5 hash function.</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Hmacmd5.#ctor">
+            <summary>Set new HMACMD5 instance</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Hmacmd5.Compute(System.Byte[],System.Int64,System.Int32)">
+            <summary>
+            Generate hash from byte array
+            </summary>
+            <param name="buffer">byte array to compute</param>
+            <param name="offset">start position</param>
+            <param name="length">Total length to read</param>
+            <returns>computed hash</returns>
+        </member>
+        <member name="P:Isolib.Algorithms.Hmacmd5.Key">
+            <summary>
+            get/set Cryptography Key
+            </summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Hmacmd5.Compute(System.Byte[])">
+            <summary>
+            Generate hash from byte array
+            </summary>
+            <param name="buffer">byte array to compute</param>
+            <returns>computed hash</returns>
+        </member>
+        <member name="T:Isolib.Algorithms.Checksum32">
+            <summary>Contains funtions to calculate Checksum32</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Checksum32.Compute(System.Byte[])">
+            <summary>Computes Checksum32</summary>
+            <param name="buffer">the Input to compute the hash code</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Checksum32.Compute(System.Byte[],System.Int64,System.Int32)">
+            <summary>Calculate Checksum32</summary>
+            <param name="value">The Byte Array value</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Checksum32.Compute(System.IO.Stream,System.Int64,System.Int32)">
+            <summary>Calculate Checksum32</summary>
+            <param name="stream">The data stream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Checksum32.Compute(Isolib.IOPackage.RWStream,System.Int64,System.Int32)">
+            <summary>Calculate Checksum32 using CRC Tables</summary>
+            <param name="stream">The data RWStream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="T:Isolib.Algorithms.Crc32">
+            <summary>Contains funtions to calculate CRC32</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32.Compute(System.Byte[])">
+            <summary>Calculate CRC32 using CRC Tables</summary>
+            <param name="value"> The value that will be calculated</param>
+            <returns>Calculated Bytes</returns>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32.Compute(System.Byte[],System.Int64,System.Int32)">
+            <summary>Calculate CRC32 using CRC Tables</summary>
+            <param name="value">The Byte Array value</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32.Compute(System.IO.Stream,System.Int64,System.Int32)">
+            <summary>Calculate CRC32 using CRC Tables</summary>
+            <param name="stream">The data stream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+            
+        </member>
+        <member name="M:Isolib.Algorithms.Crc32.Compute(Isolib.IOPackage.RWStream,System.Int64,System.Int32)">
+            <summary>Calculate CRC32 using CRC Tables</summary>
+            <param name="stream">The data RWStream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="T:Isolib.Algorithms.Sha1">
+            <summary>Contains funtions to calculate SHA1</summary>
+        </member>
+        <member name="M:Isolib.Algorithms.Sha1.Compute(System.Byte[])">
+            <summary>Computes a SHA1 hash on specified data</summary>
+            <param name="buffer">the Input to compute the hash code</param>
+            <seealso cref="M:Isolib.Algorithms.Sha1.Compute(System.Byte[],System.Int32,System.Int32)"/>
+        </member>
+        <member name="M:Isolib.Algorithms.Sha1.Compute(System.Byte[],System.Int32,System.Int32)">
+            <summary>Computes a SHA1 hash on specified data</summary>
+            <param name="buffer">the Input to compute the hash code</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Sha1.Compute(System.IO.Stream,System.Int64,System.Int32)">
+            <summary>Computes a SHA1 hash on specified data</summary>
+            <param name="stream">The data stream to compute the hash code</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Algorithms.Sha1.Compute(Isolib.IOPackage.RWStream,System.Int64,System.Int32)">
+            <summary>Computes a SHA1 hash on specified data</summary>
+            <param name="stream">The data RWStream</param>
+            <param name="offset">The offset into the byte array from which to begin using data</param>
+            <param name="count">The number of bytes the array to use as data</param>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.#ctor(System.String)">
+            <summary>
+            Constructor for hex key
+            </summary>
+            <param name="hexKey">Cipher key as a hex string</param>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.#ctor(System.Byte[])">
+            <summary>
+            Constructor for byte key
+            </summary>
+            <param name="Key">Cipher key as a byte array</param>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.Encrypt_CBC(System.String)">
+            <summary>
+            Encrypts a string in CBC mode
+            </summary>
+            <param name="pt">Plaintext data to encrypt</param>
+            <returns>Ciphertext with IV appended to front</returns>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.Decrypt_CBC(System.String)">
+            <summary>
+            Decrypts a string in CBC mode
+            </summary>
+            <param name="ct">Ciphertext with IV appended to front</param>
+            <returns>Plaintext</returns>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.Decrypt_CBC(System.Byte[])">
+            <summary>
+            Decrypts a byte array in CBC mode.
+            IV must be created and saved manually.
+            </summary>
+            <param name="ct">Ciphertext data to decrypt</param>
+            <returns>Plaintext</returns>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.Encrypt_CBC(System.Byte[])">
+            <summary>
+            Encrypts a byte array in CBC mode.
+            IV must be created and saved manually.
+            </summary>
+            <param name="pt">Plaintext data to encrypt</param>
+            <returns>Ciphertext</returns>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.Encrypt_ECB(System.String)">
+            <summary>
+            Encrypt a string in ECB mode
+            </summary>
+            <param name="pt">Plaintext to encrypt as ascii string</param>
+            <returns>hex value of encrypted data</returns>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.Decrypt_ECB(System.String)">
+            <summary>
+            Decrypts a string (ECB)
+            </summary>
+            <param name="ct">hHex string of the ciphertext</param>
+            <returns>Plaintext ascii string</returns>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.Encrypt_ECB(System.Byte[])">
+            <summary>
+            Encrypts a byte array in ECB mode
+            </summary>
+            <param name="pt">Plaintext data</param>
+            <returns>Ciphertext bytes</returns>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.Decrypt_ECB(System.Byte[])">
+            <summary>
+            Decrypts a byte array (ECB)
+            </summary>
+            <param name="ct">Ciphertext byte array</param>
+            <returns>Plaintext</returns>
+        </member>
+        <member name="P:Isolib.Encryptions.BlowFish.IV">
+            <summary>
+            Initialization vector for CBC mode.
+            </summary>
+        </member>
+        <member name="M:Isolib.Encryptions.BlowFish.SetRandomIV">
+            <summary>
+            Creates and sets a random initialization vector.
+            </summary>
+            <returns>The random IV</returns>
+        </member>
+        <member name="T:Isolib.Encryptions.RC4">
+            <summary>
+            RC4 Encryption Class
+            </summary>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.#ctor">
+            <summary>
+            Inititialize new RC4
+            </summary>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.#ctor(System.Byte[]@)">
+            <summary>
+             Inititialize new RC4 with Key
+            </summary>
+            <param name="Key">Encryption Key</param>
+        </member>
+        <member name="P:Isolib.Encryptions.RC4.Key">
+            <summary>
+            get/set encrytion key
+            </summary>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.TransformBlock(System.Byte[]@,System.Int32,System.Int32)">
+            <summary>
+            Transforms Data 
+            </summary>
+            <param name="Data">data to proccess</param>
+            <param name="Index">start index</param>
+            <param name="Count">Length</param>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.TransformBlock(System.Byte[]@,System.Int32)">
+            <summary>
+            Transforms Data 
+            </summary>
+            <param name="Data">data to proccess</param>
+            <param name="Count">Length </param>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.TransformBlock(System.Byte[]@)">
+            <summary>
+            Transforms Data 
+            </summary>
+            <param name="Data">Data To Proccess</param>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.TransformFinalBlock(System.Byte[]@,System.Int32,System.Int32)">
+            <summary>
+            Transforms Final Data 
+            </summary>
+            <param name="Data">data to proccess</param>
+            <param name="Index">start index</param>
+            <param name="Count">Length</param>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.TransformFinalBlock(System.Byte[]@,System.Int32)">
+            <summary>
+            Transforms Final Data 
+            </summary>
+            <param name="Data">data to proccess</param>
+            <param name="Count">Length</param>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.TransformFinalBlock(System.Byte[]@)">
+            <summary>
+            Transforms Final Data 
+            </summary>
+            <param name="Data">data to proccess</param>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.Reset">
+            <summary>
+            Reset handles
+            </summary>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.Clone">
+            <summary>
+            Clone RC4 Instance
+            </summary>
+            <returns>Deserialized stream</returns>
+        </member>
+        <member name="M:Isolib.Encryptions.RC4.Dispose">
+            <summary>
+            Dispose Class
+            </summary>
+        </member>
+        <member name="T:Isolib.Encryptions.Rsa">
+            <summary>Contains function/s that deals with the generation RSA Parameter data</summary>
+        </member>
+        <member name="M:Isolib.Encryptions.Rsa.CreateKeys">
+            <summary>Generates RSAParameters keys</summary>
+        </member>
+        <member name="M:Isolib.Encryptions.Rsa.GeneratePks1Signature(System.Security.Cryptography.RSAParameters,System.Byte[])">
+            <summary>Generate a PKS1 Signature of SHA1 digest</summary>
+            <param name="param">The RSA parameters keys</param>
+            <param name="hash"> The SHA1 digest</param>
+        </member>
+        <member name="M:Isolib.Encryptions.Rsa.SignatureVerify(System.Security.Cryptography.RSAParameters,System.Byte[],System.Byte[])">
+            <summary>Verify a PKS1 signature of SHA1 digest</summary>
+            <param name="param">The RSA parameters keys</param>
+            <param name="hash">SHA1 hash</param>
+            <param name="signature">Outputs the signature</param>
+        </member>
+        <member name="T:Isolib.Functions.WriteBookmark">
+            <summary>Write Hex Workshop Bookmarks</summary>
+        </member>
+        <member name="M:Isolib.Functions.WriteBookmark.#ctor(System.String,System.String)">
+            <summary>Write Hex Workshop Bookmarks constructor</summary>
+            <param name="bookMarkName">The name of the bookmark</param>
+            <param name="outpath">The output path</param>
+        </member>
+        <member name="M:Isolib.Functions.WriteBookmark.Write(System.String,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>Write bookmarks sections</summary>
+            <param name="name">The name of section</param>
+            <param name="offset">The offset of the section</param>
+            <param name="length">The length of the section</param>
+            <param name="count">Total entries</param>
+            <exception cref="T:System.Exception">Stream has been Closed execption</exception>
+        </member>
+        <member name="M:Isolib.Functions.WriteBookmark.Close">
+            <summary>Close the bookmark</summary>
+        </member>
+        <member name="M:Isolib.Functions.WriteBookmark.Dispose">
+            <summary>Dispose object</summary>
+        </member>
+        <member name="T:Isolib.Functions.Functions">
+            <summary>Contains various functions</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.InsertBytes(System.Byte[],System.Byte[],System.Int64)">
+            <summary>Insert Bytes into a byte array</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.DeleteBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>Delete Bytes from array</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.GetPercentage(System.Int64,System.Int64,System.Byte)">
+            <summary>Gets Percentage Value with %</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.CombineArray(System.Array,System.Array)">
+            <summary>Combines 2 arrays</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.IsValidHex(System.String)">
+            <summary>Check for valid Hex string</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.IsValidUnicode(System.String)">
+            <summary>Check for valid Unicode string</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.IsValidNumeric(System.Int64)">
+            <summary>Check for valid Number value</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.IsValidAscii(System.String)">
+            <summary>Check for valid ASCII string</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.GetSize(System.Double)">
+            <summary>Rounds length and adds size identifier.</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ConvertImageFormat(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>Converts image format</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.CompareByteArray(System.Byte[],System.Byte[])">
+            <summary>campares byte array</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ImageFromByteArray(System.Byte[])">
+            <summary>Gets Image from ByteArray</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ImageFromStream(System.IO.Stream)">
+            <summary>Gets image from Stream</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.EndianSwap(System.Int16)">
+            <summary>Reverse a value</summary>
+            <param name="value">The value to be reversed</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.EndianSwap(System.Int32)">
+            <summary>Reverse a value</summary>
+            <param name="value">The value to be reversed</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.EndianSwap(System.Int64)">
+            <summary>Reverse a value</summary>
+            <param name="value">The value to be reversed</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.EndianSwap(System.Byte[])">
+            <summary>Converts the Endian of a byte array</summary>
+            <param name="buffer">The Byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.EndianSwap(System.Double)">
+            <summary>Converts the Endian of a byte array</summary>
+            <param name="value">the double value</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.EndianSwap(System.Single)">
+            <summary>Converts the Endian of a byte array</summary>
+            <param name="value">The float value</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.LongToHexString(System.Int64)">
+            <summary>Convert Long to String Hex</summary>
+            <param name="value">The byte array</param>
+            <returns>Returns an hex string value</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.FloatToHexString(System.Single)">
+            <summary>Convert float to String Hex</summary>
+            <param name="value">The float value</param>
+            <returns>Returns an hex string value</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToHexString(System.Byte[])">
+            <summary>Convert Byte Array to String Hex</summary>
+            <param name="value">The byte array</param>
+            <returns>Returns an hex string value</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.DecimalToHexString4Bytes(System.Decimal)">
+            <summary>Convert a decimal value to 4 bytes hex string</summary>
+            <param name="value">The value to convert</param>
+            <returns>The hex string</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.DecimalToHexString(System.Decimal)">
+            <summary>Convert a decimal value to hex string</summary>
+            <param name="value">The value to convert</param>
+            <returns>The hex string</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.StringToHexString(System.String,System.Int32,System.Int32)">
+            <summary>Edit a String Hex</summary>
+            <param name="hexString">The valid String you want to edit</param>
+            <param name="firstCharPos">The first Character we want to keep Position -starting from 0</param>
+            <param name="finalCharPos">The Final Character we want to keep</param>
+            <returns>Returns an hex string value</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.IntToFatTimeDateTime(System.Int32)">
+            <summary>Converts an Int32 FatTime to a DateTime</summary>
+            <param name="dateTime">The integer value to convert</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.LongToDateTime(System.Int64)">
+            <summary>Converts an Int64 FileTime to a DateTime</summary>
+            <param name="input">The long value to convert</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.DateTimeToInt64(System.DateTime)">
+            <summary>Converts a DateTime to an Int64 FileTime</summary>
+            <param name="input">The date time input</param>
+            <returns></returns>
+        </member>
+        <member name="P:Isolib.Functions.Functions.DateTimeZero">
+            <summary>Returns an all 0 to DT</summary>
+        </member>
+        <member name="M:Isolib.Functions.Functions.Int16ToBytesArray(System.Int16)">
+            <summary>Converts Integer 16 to 2 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.UInt16ToBytesArray(System.UInt16)">
+            <summary>Converts Unsigned Integer 16 to 2 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.Int24ToBytesArray(System.Int32)">
+            <summary>Converts Integer 24 to 3 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.UInt24ToBytesArray(System.UInt32)">
+            <summary>Converts Unsigned Integer 24 to 3 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.Int32ToBytesArray(System.Int32)">
+            <summary>Converts Integer 32 to 4 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.UInt32ToBytesArray(System.UInt32)">
+            <summary>Converts Unsigned Integer 32 to 4 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.Int40ToBytesArray(System.Int64)">
+            <summary>Converts Integer 40 to 5 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.UInt40ToBytesArray(System.UInt64)">
+            <summary>Converts Unsigned Integer 40 to 5 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.Int48ToBytesArray(System.Int64)">
+            <summary>Converts Integer 64 to 6 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.UInt48ToBytesArray(System.UInt64)">
+            <summary>Converts Unsigned Integer 64 to 6 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.Int56ToBytesArray(System.Int64)">
+            <summary>Converts Integer 64 to 7 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.UInt56ToBytesArray(System.UInt64)">
+            <summary>Converts Unsigned Integer 64 to 7 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.Int64ToBytesArray(System.Int64)">
+            <summary>Converts Integer 64 to 8 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.UInt64ToBytesArray(System.UInt64)">
+            <summary>Converts Unsigned Integer 64 to 8 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.SingleToBytesArray(System.Single)">
+            <summary>Converts Single to 4 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.DoubleToBytesArray(System.Double)">
+            <summary>Converts Double to 8 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.DecimalToBytesArray(System.Decimal)">
+            <summary>Converts Decimal to 8 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.DecimalTo4BytesArray(System.Decimal)">
+            <summary>Converts Decimal to 4 Byte array</summary>
+            <param name="value">The value to be converted</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ImageToByteArray(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>Converts an Image to a byte array</summary>
+            <param name="image"> The Image</param>
+            <param name="format"> The Image Type</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.BytePiece(System.Byte[],System.UInt32,System.UInt32)">
+            <summary>Get a piece of a full byte array</summary>
+            <param name="piece">The Full byte you want to take a piece from</param>
+            <param name="startOffset">The starting offset</param>
+            <param name="size">The full size of your new byte piece</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToUInt16(System.Byte[])">
+            <summary>Converts 2 Bytes Array to Unsigned Integer 16</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToInt16(System.Byte[])">
+            <summary>Converts 2 Bytes Array to Integer 16</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToInt24(System.Byte[])">
+            <summary>Converts 3 Bytes Array to Integer 24</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToUInt24(System.Byte[])">
+            <summary>Converts 3 Bytes Array to Unsigned Unsigned Integer 24</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToInt32(System.Byte[])">
+            <summary>Converts 4 Bytes Array to Integer 32</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToUInt32(System.Byte[])">
+            <summary>Converts 4 Bytes Array to Unsigned Integer 32</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToInt40(System.Byte[])">
+            <summary>Converts 5 Bytes Array to Integer 64</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToUInt40(System.Byte[])">
+            <summary>Converts 5 Bytes Array to Unsigned Integer 64</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToInt48(System.Byte[])">
+            <summary>Converts 6 Bytes Array to Integer 64</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToUInt48(System.Byte[])">
+            <summary>Converts 6 Bytes Array to Unsigned Integer 64</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToInt56(System.Byte[])">
+            <summary>Converts 7 Bytes Array to Integer 64</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToUInt56(System.Byte[])">
+            <summary>Converts 7 Bytes Array to Unsigned Integer 64</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToInt64(System.Byte[])">
+            <summary>Converts 8 Bytes Array to Integer 64</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToUInt64(System.Byte[])">
+            <summary>Converts 8 Bytes Array to Unsigned Integer 64</summary>
+            <param name="buffer">byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToSingle(System.Byte[])">
+            <summary>Converts Byte Array to Single/Float</summary>
+            <param name="buffer">The Byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ByteArrayToDouble(System.Byte[])">
+            <summary>Converts Byte Array to Double</summary>
+            <param name="buffer">The Byte Array</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.HexToInt(System.String)">
+            <summary>Convert hex string to Int</summary>
+            <param name="value">The string(hex) value</param>
+            <returns>A long value of the given hex</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.HexToLong(System.String)">
+            <summary>Convert hex string to Long</summary>
+            <param name="value">The string(hex) value</param>
+            <returns>A long value of the given hex</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.HexToBytes(System.String)">
+            <summary>Converts a Hex string to bytes</summary>
+            <param name="input">Is the String input</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.ReverseByteArray(System.Byte[])">
+            <summary>Reverse array of bytes</summary>
+            <param name="piece">The byte array to use</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.DateTimeToFatTimeInt(System.DateTime)">
+            <summary>Converts a DateTime to an Int32 FatTime</summary>
+            <param name="dateTime">The date Time to convert</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.BlockCountFile(Isolib.IOPackage.RWStream)">
+            <summary>Returns the count of blocks this file contains</summary>
+            <param name="theTemporaryIo">The temporary I/O</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.BlockRemainder(Isolib.IOPackage.RWStream)">
+            <summary>Return the count of remaining blocks to write or read</summary>
+            <param name="temporaryIo">The temporary Io</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.FixEmbeddedFilePath(System.String)">
+            <summary>Fix the path/name of the embedded file in case of bad character</summary>
+            <param name="input">The String input path/name</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.IsValidXboxName(System.String)">
+            <summary>Checks if the name is a valid Xbox Name</summary>
+            <param name="name">String value</param>
+            <returns>True if valid</returns>
+        </member>
+        <member name="M:Isolib.Functions.Functions.SetByteArray(System.Byte[]@,System.Byte[])">
+            <summary>Copy a range of elements from one array to another</summary>
+            <param name="destinationArray">Data's destination</param>
+            <param name="sourceArray">Contains Data to copy</param>
+        </member>
+        <member name="M:Isolib.Functions.Functions.SimpleScramble(System.Byte[],System.Boolean)">
+            <summary>EndianSwaps bytes in 8 byte blocks, Reverse true if reverse each 8 byte blocks</summary>
+            <param name="sourceArrayPiece">The byte array to use</param>
+            <param name="reverse">If to reverse the byte array</param>
+        </member>
+        <member name="T:Isolib.STFSPackage.EmbeddedFileEntry">
+            <summary>Working with embedded file</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.EmbeddedFileEntry.#ctor(Isolib.STFSPackage.EmbeddedFileEntry)">
+            <summary>Initialize the Embedded file entry</summary>
+            <param name="embeddedFileEntry">Empty Embedded file entry</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.EmbeddedFileEntry.#ctor(System.Byte[],System.Int64,System.UInt16,Isolib.STFSPackage.Stfs)">
+            <summary>Initialize the Embedded file entry</summary>
+            <param name="bufferOfEmbeddedFileInfo">The buffer of an embedded file information</param>
+            <param name="fileInfoOffset">The offset of an embedded file information</param>
+            <param name="id">The embedded file ID</param>
+            <param name="stfsPackage">The Initialized main package</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.EmbeddedFileEntry.#ctor(System.String,System.Int32,System.Boolean,System.UInt16,System.UInt16,Isolib.STFSPackage.Stfs)">
+            <summary>Initialize the Embedded file entry</summary>
+            <param name="nameIn">Embedded file name</param>
+            <param name="theSizeOfFileInByte">The size of file in bytes (Big Endian)</param>
+            <param name="isFolder">The input Folder</param>
+            <param name="id">The embedded file id</param>
+            <param name="thePathIndicator">The path Indicator to show if the file is located in the root or sub directory</param>
+            <param name="stfsPackage">The Initialized main package</param>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.Accessed">
+            <summary>Get the time last accessed</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.Created">
+            <summary>Get the time Created</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.DataOffset">
+            <summary>Get the embedded file Data starting offset</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.ParentFolder">
+            <summary>The parent directory/folder name</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.IsDeleted">
+            <summary>Check if item is deleted</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.Name">
+            <summary>Get the entry name</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.Size">
+            <summary>Get the embedded file size</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.SizeOffset">
+            <summary>The offset of the file size</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.EntryId">
+            <summary>Get the entry ID</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.NameLength">
+            <summary>Get the embedded file name length</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.UnknownFlag">
+            <summary>Check if the flag can be identified</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.FolderFlag">
+            <summary>Get the folder flag</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.ParentEntryId">
+            <summary>Get the folder pointer</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.AmountOfDataBlocks">
+            <summary>The amount of data blocks</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.EmbeddedFileEntry.SizeOfFileInByte">
+            <summary>Size of embedded file in byte</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.BlockRecord.#ctor">
+            <summary>Initialize Block Records</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.BlockRecord.#ctor(System.UInt32)">
+            <summary>Initialize Block Records</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.BlockRecord.BlocksFree">
+            <summary>Set and get Free Blocks</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.BlockRecord.Flags">
+            <summary>Get and Set Flags</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.BlockRecord.Index">
+            <summary>Get and Set Index</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.BlockRecord.Indicator">
+            <summary>Get and Set Indicator</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.BlockRecord.NextBlock">
+            <summary>Get and Set Next Block</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.BlockRecord.CurrentBlock">
+            <summary>Get and Set Current Block</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.Descriptor">
+            <summary>Contains function/s that deals with STFS volume</summary>
+            <seealso cref="T:Isolib.STFSPackage.HeaderData"/>
+        </member>
+        <member name="M:Isolib.STFSPackage.Descriptor.#ctor(Isolib.IOPackage.RWStream)">
+            <summary>Working with the file system</summary>
+            <param name="mainIo"> </param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Descriptor.BlockToOffset(System.UInt32)">
+            <summary>Get a block offset using the specified block</summary>
+            <param name="block">The block to use</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Descriptor.GenerateBaseOffset(System.UInt32,Isolib.STFSPackage.TreeLevel)">
+            <summary>Generates a hash base</summary>
+            <param name="block">The block value</param>
+            <param name="tree">The tree level</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Descriptor.GenerateDataBlock(System.UInt32)">
+            <summary>Generates an embedded file block offset</summary>
+            <param name="block">The block value to use</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Descriptor.GenerateDataOffset(System.UInt32)">
+            <summary>Generates a data offset</summary>
+            <param name="block">The block value</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Descriptor.GenerateHashBlock(System.UInt32,Isolib.STFSPackage.TreeLevel)">
+            <summary>Generates a hash Block</summary>
+            <param name="block">The block value</param>
+            <param name="tree">The tree level</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Descriptor.GenerateHashOffset(System.UInt32,Isolib.STFSPackage.TreeLevel)">
+            <summary>Generates a hash offset</summary>
+            <param name="block">The block value</param>
+            <param name="tree">The tree level</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Descriptor.SetStructure(Isolib.STFSPackage.StructureType)">
+            <summary>Set the values for the two types of volume descriptor</summary>
+            <param name="type">The volume descriptor type</param>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.BaseBlock">
+            <summary>Get the base block</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.BlockCount">
+            <summary>Get Block count</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.BlockLevel">
+            <summary>Get Block level</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.FileTableBlock">
+            <summary>Get / Set File table starting block</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.FolderTableBlockCount">
+            <summary>Get / Set File table block count</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.FileTableBlockCount">
+            <summary>Get / Set File table block count</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.SpaceBetween">
+            <summary>Get space between tables </summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.Type">
+            <summary>Get table size shift</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Descriptor.GetDescriptor">
+            <summary>Returns the STFS volume Descriptor</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.Entries">
+            <summary>Object for STFS File Entry</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.Entries.#ctor(Isolib.STFSPackage.EmbeddedFileEntry)">
+            <summary>The file entry constructor</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.Entries.ClearBlocks">
+            <summary>Clear file entry blocks</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.Entries.Extract">
+            <summary>This is the actually embedded file extraction process</summary>
+            <returns>Return the buffer byte[] of the embedded file in CON file</returns>
+        </member>
+        <member name="M:Isolib.STFSPackage.Entries.Replace(Isolib.IOPackage.RWStream)">
+            <summary>Replace the file method with stream</summary>
+            <param name="temporaryIo">The read and write stream</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Entries.ReadBlocks">
+            <summary>Read File Entry Blocks</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.Entries.EmbeddedDataExtraction(Isolib.IOPackage.RWStream)">
+            <summary>Write the data into a temporary file</summary>
+            <param name="input"> The I/O input stream</param>
+            <returns>If true or flase depends if the operation was successful</returns>
+        </member>
+        <member name="P:Isolib.STFSPackage.Entries.Opened">
+            <summary>Returns if the file blocks are not empty or null</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.FolderEntries">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.HeaderData">
+            <summary>Contains function/s that deals with STFS Header Data</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.HeaderData.#ctor(Isolib.IOPackage.RWStream)">
+            <summary>Header Data Constructor</summary>
+            <param name="stream">The RWStream of the data file</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.HeaderData.Write(Isolib.IOPackage.RWStream@)">
+            <summary>Write the header data</summary>
+            <param name="stream">The writer stream</param>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.ContentImage">
+            <summary>Get and set the header content image in image</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.ContentImageByte">
+            <summary>Get and set the header content image in byte array</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.ContentSize">
+            <summary>Get the content size</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.ContentSizeOnDisk">
+            <summary>Get the content size</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.Description">
+            <summary>Get and Set the header descriptions </summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.DeviceID">
+            <summary>Get and Set the Device ID</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.PackageImage">
+            <summary>Get and set the header package image in image</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.PackageImageByte">
+            <summary>Get and set the header package image in byte array</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.ProfileID">
+            <summary>Get and Set the Profile ID</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.TitleID">
+            <summary>Get the title Id of the file</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.PublisherName">
+            <summary>Get and Set Publisher </summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.Language">
+            <summary>Data Language</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.ConsoleID">
+            <summary>Get and set the console id</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.SignatureHeaderType">
+            <summary>Get and set the header magic type</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.DisplayName">
+            <summary>Get and set the header displayed title</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.TitleName">
+            <summary>Get and set the header package title</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.MediaID">
+            <summary>Get the Media ID</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.HeaderData.ContentType">
+            <summary>Get and set the header package type</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.Stfs">
+            <summary>STFS (Secure Transacted File System) is the file system used by 
+            the Xbox 360 for all packages created and downloaded by the system</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.#ctor(System.String,Isolib.STFSPackage.Endian)">
+            <summary>Stfs Constructor</summary>
+            <param name="filepath">The stfs file path</param>
+            <param name="endian">Write or Read endian type</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.#ctor(System.Byte[])">
+            <summary>Stfs Constructor</summary>
+            <param name="buffer">The stfs byte[] buffer</param>
+            <exception cref="T:System.Exception">Error</exception>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.GetBlocks(System.UInt32,System.UInt32,Isolib.STFSPackage.BlockRecord[]@)">
+            <summary>Generates data offsets for embedded files broken down to blocks</summary>
+            <param name="fileTableBlockCount">The file table block count</param>
+            <param name="fileTableBlockNumber">The file table block number</param>
+            <param name="fileBlock">The block that will be sent back out</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.GetRecord(System.UInt32,Isolib.STFSPackage.TreeLevel)">
+            <summary>Get the Block Record</summary>
+            <param name="block">The block value</param>
+            <param name="level">The tree level</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.GenerateDataOffset(System.UInt32)">
+            <summary>Generates a data offset</summary>
+            <param name="block">The block value</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.GenerateBaseOffset(System.UInt32,Isolib.STFSPackage.TreeLevel)">
+            <summary>Generates a hash base</summary>
+            <param name="block">The block value</param>
+            <param name="tree">The tree level</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.WriteEmbeddedFile(Isolib.IOPackage.RWStream@,Isolib.STFSPackage.BlockRecord[])">
+            <summary>Write the embedded file data data file</summary>
+            <param name="input">Temporary referenced I/O</param>
+            <param name="blocks">The blocks the data has</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.GenerateHashOffset(System.UInt32,Isolib.STFSPackage.TreeLevel)">
+            <summary>Generates a hash offset</summary>
+            <param name="block">The block value</param>
+            <param name="tree">The tree level</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.WriteHash(System.Int64,System.Int64,System.Int32,Isolib.IOPackage.RWStream@)">
+            <summary>Writes a SHA1 hash from one I/O to another - Reads from one I/O, hashes, stores it in another I/O</summary>
+            <param name="input">The input I/O to read and split to write</param>
+            <param name="read">The position to read</param>
+            <param name="write">The position to write</param>
+            <param name="size">The bytes count to read</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.WriteHash(Isolib.IOPackage.RWStream@,System.Int64,System.Int64,System.Int32,Isolib.IOPackage.RWStream@)">
+            <summary>Writes a SHA1 hash from one I/O to another - Reads from one I/O, hashes, stores it in another I/O</summary>
+            <param name="input">The input I/O to read</param>
+            <param name="read">The position to read</param>
+            <param name="write">The position to write</param>
+            <param name="size">The bytes count to read</param>
+            <param name="output">The output to write</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.WriteHeader(Isolib.STFSPackage.RsaParam)">
+            <summary>Write New STFS File</summary>
+            <param name="param">The Rsaparameters to use</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.WriteTables">
+            <summary>Write Hash tables</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Finish">
+            <summary>Write Header Data and fix CON file</summary>
+            <returns>A boolean of the success of this function</returns>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Close">
+            <summary>Close the Initializer</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Extract(System.String)">
+            <summary>Extract an embedded file from the Stfs file</summary>
+            <param name="filename">The embedded file name</param>
+            <returns>The data of the specified embedded file </returns>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Extract(System.Int32)">
+            <summary>Extract an embedded file from the Stfs file</summary>
+            <param name="index">The embedded file Index</param>
+            <returns>The data of the specified embedded file </returns>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Extract(Isolib.STFSPackage.Entries)">
+            <summary>Extract an embedded file from the Stfs file</summary>
+            <param name="entry">The embedded file entrty file</param>
+            <returns>The data of the specified embedded file </returns>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Extract(System.String,System.String)">
+            <summary>Extract an embedded file from the Stfs file</summary>
+            <param name="filename">The embedded file name</param>
+            <param name="directory">The directory the file will be extracted to</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Extract(Isolib.STFSPackage.Entries,System.String)">
+            <summary>Extract an embedded file from the Stfs file</summary>
+            <param name="entry">The embedded file entrty file</param>
+            <param name="directory">The directory the file will be extracted to</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Extract(System.Int32,System.String)">
+            <summary>Extract an embedded file from the Stfs file</summary>
+            <param name="index">The embedded file Index</param>
+            <param name="directory">The directory the file will be extracted to</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Replace(System.Byte[],System.String)">
+            <summary>Replace a file using byte array</summary>
+            <param name="buffer">Array of bytes that represents the file we will be Replaceing</param>
+            <param name="embeddedfileName">The embedded file that will be replaced</param>
+        </member>
+        <member name="M:Isolib.STFSPackage.Stfs.Replace(Isolib.IOPackage.RWStream,System.String)">
+            <summary>Replace a file using I/O Stream</summary>
+            <param name="streamer">The I/O Stream with the data we want to write</param>
+            <param name="embeddedfileName">The embedded file that will be replaced</param>
+        </member>
+        <member name="P:Isolib.STFSPackage.Stfs.HeaderData">
+            <summary>Get details of the header data</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.Stfs.EmbeddedFiles">
+            <summary></summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.Endian">
+            <summary> </summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.Endian.Big">
+            <summary></summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.Endian.Little">
+            <summary></summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.SignatureType">
+            <summary>File Signature type enumerations</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.SignatureType.Con">
+            <summary>CON file</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.SignatureType.Live">
+            <summary>LIVE file</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.SignatureType.Pirs">
+            <summary>PIR file</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.SignatureType.Unknown">
+            <summary>UNKNOWN file</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.ContentType">
+            <summary>Package type enumerations</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.ContentType.SavedGame">
+            <summary>Save game data</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.ContentType.HddInstalledGame">
+            <summary>Hard drive installed games</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.ContentType.OriginalXboxGame">
+            <summary>Original xbox games</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.ContentType.SocialTitle">
+            <summary>Social titles</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.ContentType.GamesOnDemand">
+            <summary>Game on demand</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.LanguagesType">
+            <summary>Language Type Enumeration</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.English">
+            <summary>English Langauage</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.Japanese">
+            <summary>Japanese Langauage</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.German">
+            <summary>German Langauage</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.French">
+            <summary>French Langauage</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.Spanish">
+            <summary>Spanish Langauage</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.Italian">
+            <summary>Italian Langauage</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.Korean">
+            <summary>Korean Langauage</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.Chinese">
+            <summary>Chinese Langauage</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.LanguagesType.Portuguese">
+            <summary>Portugese Langauage</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.StructureType">
+            <summary>File Structure type enumerations</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.StructureType.Type0">
+            <summary>Structure Type 0</summary>
+        </member>
+        <member name="F:Isolib.STFSPackage.StructureType.Type1">
+            <summary>Structure Type 1</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.TreeLevel">
+            <summary>The (Tree) Block Level</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.License">
+            <summary>Contains function/s that deals with STFS License entries</summary>
+            <seealso cref="T:Isolib.STFSPackage.HeaderData"/>
+        </member>
+        <member name="M:Isolib.STFSPackage.License.#ctor(System.Int64,System.Int32,System.Int32)">
+            <summary>Initiate the license entry constructor</summary>
+            <param name="theID">The license id</param>
+            <param name="theBits">The license bits</param>
+            <param name="theFlags">The license flags</param>
+        </member>
+        <member name="P:Isolib.STFSPackage.License.LicenseFlags">
+            <summary>Get the license flags</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.License.LicenseID">
+            <summary>Get the license ID</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.License.LicenseBits">
+            <summary>Get the license bits</summary>
+        </member>
+        <member name="T:Isolib.STFSPackage.RsaParam">
+            <summary>Contains function/s that deals with RSA Parameter to fix the CON file</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.RsaParam.#ctor">
+            <summary>Initialize the RSAParameters to fix the xbox 360 Con</summary>
+        </member>
+        <member name="M:Isolib.STFSPackage.RsaParam.LoadCon(Isolib.IOPackage.RWStream)">
+            <summary>console package signature generation</summary>
+            <param name="kv">The key vault input stream</param>
+        </member>
+        <member name="P:Isolib.STFSPackage.RsaParam.Certificate">
+            <summary>Get Certificate</summary>
+        </member>
+        <member name="P:Isolib.STFSPackage.RsaParam.ParametersRsaKeys">
+            <summary>Get the RSA Parameters for this instance (only works if valid)</summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD">
+            <summary>Class for Parsing GPD Data</summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.DataList">
+            <summary>Data Structure Containing the parsed data lists</summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._EntryList">
+            <summary>
+            list contains Entrydata
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._argievements">
+            <summary>
+            list contains the Erchievements data
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._SyncList1">
+            <summary>
+            list contains the first SyncInfo (Uint64)
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._SyncList2">
+            <summary>
+            list contains the second SyncInfo (Uint64)
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._SyncList3">
+            <summary>
+            list contains the Third SyncInfo (Uint64)
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._SyncData">
+            <summary>
+            list contains the SyncData (Uint64)
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._TitleCreditEarned">
+            <summary>
+            list contains The TitleCredit Earned (Uint64)
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._TitleArgievementEarned">
+            <summary>
+            list contains the Title Archievement earned (Uint64)
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.DataList._FreeSpaceEntries">
+            <summary>
+            list contains the FreespaceEntries
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.FreeSpaceInfo">
+            <summary>
+            Structure with FreespaceInfo
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.FreeSpaceInfo.TotalLength">
+            <summary>
+            freespace total length
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.FreeSpaceInfo.NegativeTotalLength">
+            <summary>
+            freespace negative total length
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.MainHeaders">
+            <summary>
+            structure with the main headers
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.MainHeaders.Magic">
+            <summary>
+            gpd magic
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.MainHeaders.version">
+            <summary>
+            gpd version
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.MainHeaders.EntryTableLength">
+            <summary>
+            the entry table length
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.MainHeaders.EntryCount">
+            <summary>
+            total entries
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.MainHeaders.FreeSpaceTableLength">
+            <summary>
+            freespace table length
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.MainHeaders.FreespaceTableEntryCount">
+            <summary>
+            freespace total entries
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.GameInfos">
+            <summary>
+            All GPD Game Info
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.TitleName">
+            <summary>
+            Game title name
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.UnknownString">
+            <summary>
+            unknown
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.TitleInfoname">
+            <summary>
+            Game InfoName
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.ID">
+            <summary>
+            Game TitleID
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.ArgievementsCount">
+            <summary>
+            Total Archievements
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.ArgievementsUnlocked">
+            <summary>
+            Total Archievements Unlocked
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.TotalGameScore">
+            <summary>
+            Total GameScore
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.UnlockedGameScore">
+            <summary>
+            Unlocked GameScore
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.Unknown2">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.unknown1">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.LastPlayed">
+            <summary>
+            Last Played (Uint64)
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.GameInfos.TitleImageIndex">
+            <summary>
+            TitleIMage entry Index
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.#ctor(System.String)">
+            <summary>
+            New GpdFile to parse
+            </summary>
+            <param name="GPDFile"></param>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.#ctor(System.Byte[])">
+            <summary>
+            New Gpd Array to parse
+            </summary>
+            <param name="Buffer"></param>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.SaveData">
+            <summary>
+            TitleSpecifics
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.SaveData.TitleSpecific1">
+            <summary>
+            First TitleSpecific
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.SaveData.TitleSpecific2">
+            <summary>
+            Second TitleSpecific
+            </summary>
+        </member>
+        <member name="F:Isolib.GPDPackage.GPD.SaveData.TitleSpecific3">
+            <summary>
+            Third TitleSpecific
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractSaveData(Isolib.GPDPackage.GPD.SaveData)">
+            <summary>Gets the TitleSpecific</summary>
+            <param name="TitleSpecific"> The TitkeSpecific to extract</param>
+            <returns>Extracted data</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractSaveData(Isolib.GPDPackage.GPD.SaveData,System.String)">
+            <summary>Gets the TitleSpecific</summary>
+            <param name="TitleSpecific"> The TitkeSpecific to extract</param>
+            <param name="Filepath">The Filepath to save the file</param>
+            <returns>True if succes</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractAllSavedata(System.String)">
+            <summary>Extract Availible Savedata to the outpath</summary>
+            <param name="outpath">Path To Extract the availible data</param>
+            <returns>True if Succes</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractCombinedSaves">
+            <summary>Extract All Savedata Combines Together</summary>
+            <returns>The Combined Data</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractCombinedSaves(System.String)">
+            <summary>Extract All Savedata Combines Together</summary>
+            <param name="filepath">Filepath To write the data </param>
+            <returns>True if Succes</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractEntryData(System.Int32)">
+            <summary>Extract the EntryData</summary>
+            <param name="EntryIndex">The Entry Index</param>
+            <returns>The extracted Entry Data</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractEntryData(System.Int32,System.String)">
+            <summary>Extract the EntryData</summary>
+            <param name="EntryIndex">The Entry Index</param>
+            <param name="Filepath">The FilePath to write the data </param>
+            <returns>True if Succes</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractAllEntries(System.String)">
+            <summary>Extract the EntryData</summary>
+            <param name="outpath">Path to Extract all EntryData</param>
+            <returns>True if Succes</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractTitleImage">
+            <summary>Extracts the TitleImage</summary>
+            <returns>Image</returns>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractTitleImage(System.String)">
+            <summary>
+            Extracts the TitleImage
+            </summary>
+            <param name="FilePath">The Filepath to write the Image</param>
+            <returns>True if succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractArchievementImage(System.Int32)">
+            <summary>
+            Extract The ArchievementImage
+            </summary>
+            <param name="ImageIndex">The Index for the archievementImage</param>
+            <returns>the extracted Image</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractArchievementImage(System.Int32,System.String)">
+            <summary>
+            Extract The ArchievementImage
+            </summary>
+            <param name="ImageIndex">The Index for the archievementImage</param>
+            <param name="Filepath">The Filepath to write the Image</param>
+            <returns>True if Succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractAllArchievementsImages(System.String)">
+            <summary>
+            Extract All ArchievementsImages
+            </summary>
+            <param name="outpath">The Path to extract the images to</param>
+            <returns>True if Succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractFreeSpaceBlock(System.Int32)">
+            <summary>
+            Extract the FreeSpacedata
+            </summary>
+            <param name="index">Index for the FreespaceBlock to extract</param>
+            <returns>FreespaceData</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractFreeSpaceBlock(System.Int32,System.String)">
+            <summary>
+            Extract the FreeSpacedata
+            </summary>
+            <param name="index">Index for the FreespaceBlock to extract</param>
+            <param name="Filepath">The Filepath to write the data</param>
+            <returns>True if Succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ExtractAllFreeSpaceBlocks(System.String)">
+            <summary>
+            Extracts all freespacedata to the outpath
+            </summary>
+            <param name="Outpath">Path to Extract all Freespace Data</param>
+            <returns>True if Succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ReplaceEntryData(System.Int32,System.Byte[])">
+            <summary>
+            Replace the EntryData
+            </summary>
+            <param name="index">the Index for the entry to replace</param>
+            <param name="data">the data for replacing</param>
+            <returns>True if succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ReplaceFreeSpaceEntryData(System.Int32,System.Byte[])">
+            <summary>
+            Replace the Freespace Entry Data
+            </summary>
+            <param name="index">Index for the freespace to replace</param>
+            <param name="data">the data for replacing</param>
+            <returns>True if Succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.ReplaceSavedata(System.Byte[],Isolib.GPDPackage.GPD.SaveData)">
+            <summary>
+            Replace the savedata
+            </summary>
+            <param name="data">The data for Replacing</param>
+            <param name="Titlespecific">The TitleSpecific to replace</param>
+            <returns>True if Succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.SaveDataTotalLength">
+            <summary>
+            gets the total Savelength availible
+            </summary>
+            <returns>the Total Length</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.GetRebuild">
+            <summary>
+            Gets the Rebuilded Gpd
+            </summary>
+            <returns>New gpd Data</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.RebuildFile(System.String)">
+            <summary>
+            Writes the Rebuilded gpd data to the filepath
+            </summary>
+            <param name="filepath">The filepath to write the rebuilded data</param>
+            <returns>True if Succes</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.Close">
+            <summary>
+            Close and clear Parsed Data
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.Dispose">
+            <summary>
+            Dispose this Class
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.FreeSpaceRecord">
+            <summary>
+            Get FreeSpace records
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Headers">
+            <summary>
+            Get Mainheaders
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.GPDInfo">
+            <summary>
+            Get Gpd Info
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.EntryList">
+            <summary>
+            Gets the EntryList
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.ArchievementsList">
+            <summary>
+            Get the Archievements
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.SyncList1">
+            <summary>
+            Get first Synclist
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.SyncList2">
+            <summary>
+            Get second synclist
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.SyncList3">
+            <summary>
+            Get Third synclist
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.XSyncData">
+            <summary>
+            Get the Syncdata
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleCreditEarned">
+            <summary>
+            get Title Credit earned
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleArchievementEarned">
+            <summary>
+            Get Title Archievements Earned
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.FreeSpaceEntryList">
+            <summary>
+            Get the Freespace entry list
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecific1">
+            <summary>
+            Gets the First TitleSpecific
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecific2">
+            <summary>
+            Gets the Second TitleSpecific
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecific3">
+            <summary>
+            Gets the Third TitleSpecific
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.Entries">
+            <summary>
+            Entry Class for holding the parsed data
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.Entries.#ctor(System.UInt16,System.UInt64,System.Int64,System.UInt32,System.Byte[])">
+            <summary>
+            Set new Entry Variables
+            </summary>
+            <param name="xNamespace">Entry Namespace</param>
+            <param name="ID">Entry ID</param>
+            <param name="Offset">Entry Offset</param>
+            <param name="Length">Entry data length</param>
+            <param name="Data">Entry Data</param>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Entries.XNameSpace">
+            <summary>
+            get/set Entry Namespace
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Entries.ID">
+            <summary>
+            get/set Entry ID
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Entries.Offset">
+            <summary>
+            get/set Entry Offset
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Entries.BlockOffset">
+            <summary>
+            get/set Entry BlockOffset
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Entries.Length">
+            <summary>
+            get/set Entry data length
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Entries.Data">
+            <summary>
+            get/set Entry Data
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.Achievements">
+            <summary>
+            Archievements Class for holding the parsed info
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.Achievements.#ctor(System.Int32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.Int32,System.Int64,System.String,System.String,System.String)">
+            <summary>
+            Set new Archievements
+            </summary>
+            <param name="entryindex">Archievement Entry Index</param>
+            <param name="magic">Archievement Magic</param>
+            <param name="ID">Archievement ID</param>
+            <param name="ImageID">Archievement Image ID</param>
+            <param name="Flags">Archievement Flags</param>
+            <param name="Gamerscore">Archievement Score</param>
+            <param name="UnlockTime">Archievement Unlocked time</param>
+            <param name="Name">Archievement Name</param>
+            <param name="LockedDescription">Archievement Locked Description</param>
+            <param name="UnlockedDescription">Archievement Unlocked Description</param>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.EntryIndex">
+            <summary>
+            Get Archievement EntryIndex
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.Magic">
+            <summary>
+            Get Archievement Magic
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.ID">
+            <summary>
+            Get Archievement ID
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.ImageID">
+            <summary>
+            get/Set Archievement ImageID
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.Flags">
+            <summary>
+            get/set Archievement Flags
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.GameScore">
+            <summary>
+            Get/Set Archievement Gamescore
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.UnlockTime">
+            <summary>
+            Get/Set Archievement Unlocked Time
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.Name">
+            <summary>
+            Get Archievement Name
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.LockedDescription">
+            <summary>
+            Get Archievement Locked Description
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.UnlockedDescription">
+            <summary>
+            Get Archievement Unlocked Time
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.Achievements.ImageEntryIndex">
+            <summary>
+            Get/Set Archievement Entry Index
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.SyncData">
+            <summary>
+            Class for holding The syncdata
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.SyncData.#ctor(System.Int32,System.UInt64,System.UInt64,System.UInt64)">
+            <summary>
+            Set new Syncdata variables
+            </summary>
+            <param name="Entryindex">Syncdata Entry index</param>
+            <param name="nextid">Syncdata Nex Sync ID</param>
+            <param name="LastID">Syncdata First Sync ID</param>
+            <param name="LastTime">Syncdata Last Sync Time</param>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.SyncData.EntryIndex">
+            <summary>
+            Get Syncdata Entry Index
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.SyncData.NextSyncID">
+            <summary>
+            Get/set Syncdata NextSync ID
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.SyncData.LastSyncID">
+            <summary>
+            Get/set Syncdata LastSync ID
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.SyncData.LastSyncTime">
+            <summary>
+            Get/set Syncdata Last Sync Time
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.TitleSpecifics1">
+            <summary>
+            Class For holding the first TitleSpecific Info
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.TitleSpecifics1.#ctor(System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt32,System.UInt32,System.Int64)">
+            <summary>
+            Set New TitleSpecific Variables
+            </summary>
+            <param name="index">TitleSpecific Entry Index</param>
+            <param name="id">TitleSpecific ID</param>
+            <param name="value1">TitleSpecific Unknown Value</param>
+            <param name="value2">TitleSpecific Unknown Value</param>
+            <param name="length">TitleSpecific Data Length </param>
+            <param name="value3">TitleSpecific Unknown Value</param>
+            <param name="Offset">TitleSpecific Offset</param>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics1.EntryIndex">
+            <summary>
+            Get TitleSpecific EntryIndex
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics1.Offset">
+            <summary>
+            Get TitleSpecific Offset
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics1.ID">
+            <summary>
+            Get TitleSpecific ID
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics1.Value1">
+            <summary>
+            Get TitleSpecific Value1
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics1.Length">
+            <summary>
+            Get TitleSpecific Data Length
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics1.Value2">
+            <summary>
+            Get TitleSpecific Value2
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics1.Value3">
+            <summary>
+            Get TitleSpecific Value3
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.TitleSpecifics2">
+            <summary>
+            Class For holding the Second TitleSpecific Info
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.TitleSpecifics2.#ctor(System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt32,System.UInt32,System.Int64)">
+            <summary>
+            Set New TitleSpecific Variables
+            </summary>
+            <param name="index">TitleSpecific Entry Index</param>
+            <param name="id">TitleSpecific ID</param>
+            <param name="value1">TitleSpecific Unknown Value</param>
+            <param name="value2">TitleSpecific Unknown Value</param>
+            <param name="length">TitleSpecific Data Length </param>
+            <param name="value3">TitleSpecific Unknown Value</param>
+            <param name="Offset">TitleSpecific Offset</param>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics2.EntryIndex">
+            <summary>
+            Get TitleSpecific EntryIndex
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics2.Offset">
+            <summary>
+            Get TitleSpecific Offset
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics2.ID">
+            <summary>
+            Get TitleSpecific ID
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics2.Value1">
+            <summary>
+            Get TitleSpecific Value1
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics2.Length">
+            <summary>
+            Get TitleSpecific Data Length
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics2.Value2">
+            <summary>
+            Get TitleSpecific Value2
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics2.Value3">
+            <summary>
+            Get TitleSpecific Value3
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.TitleSpecifics3">
+            <summary>
+            Class For holding the Third TitleSpecific Info
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.TitleSpecifics3.#ctor(System.Int32,System.UInt32,System.UInt32,System.UInt64,System.UInt32,System.UInt32,System.Int64)">
+            <summary>
+            Set New TitleSpecific Variables
+            </summary>
+            <param name="index">TitleSpecific Entry Index</param>
+            <param name="id">TitleSpecific ID</param>
+            <param name="value1">TitleSpecific Unknown Value</param>
+            <param name="value2">TitleSpecific Unknown Value</param>
+            <param name="length">TitleSpecific Data Length </param>
+            <param name="value3">TitleSpecific Unknown Value</param>
+            <param name="Offset">TitleSpecific Offset</param>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics3.EntryIndex">
+            <summary>
+            Get TitleSpecific EntryIndex
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics3.Offset">
+            <summary>
+            Get TitleSpecific Offset
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics3.ID">
+            <summary>
+            Get TitleSpecific ID
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics3.Value1">
+            <summary>
+            Get TitleSpecific Value1
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics3.Length">
+            <summary>
+            Get TitleSpecific Data Length
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics3.Value2">
+            <summary>
+            Get TitleSpecific Value2
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.TitleSpecifics3.Value3">
+            <summary>
+            Get TitleSpecific Value3
+            </summary>
+        </member>
+        <member name="T:Isolib.GPDPackage.GPD.FreeSpaceEntries">
+            <summary>
+            Class For holding The FreespaceEntries
+            </summary>
+        </member>
+        <member name="M:Isolib.GPDPackage.GPD.FreeSpaceEntries.#ctor(System.Int32,System.Int64,System.UInt32,System.Byte[])">
+            <summary>
+            Set new FreespaceEntry Variables
+            </summary>
+            <param name="entryindex"> Freespace Entry Index</param>
+            <param name="offset">Freespace Offset</param>
+            <param name="length">Freespace Length</param>
+            <param name="xdata">Freespace Data</param>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.FreeSpaceEntries.Offset">
+            <summary>
+            Get Freespace Offset
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.FreeSpaceEntries.Length">
+            <summary>
+            Get Freespace Data Length
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.FreeSpaceEntries.Entryindex">
+            <summary>
+            Get Freespace Entry Index
+            </summary>
+        </member>
+        <member name="P:Isolib.GPDPackage.GPD.FreeSpaceEntries.Data">
+            <summary>
+            Get/Set Freespace Data
+            </summary>
+        </member>
+        <member name="T:Isolib.IOPackage.Reader">
+            <summary>Contains function/s that deals with I/O reading of data</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.#ctor(System.Byte[],System.Boolean)">
+            <summary>Initialize Array Streaming</summary>
+            <param name="byteArray">The Byte Array to Stream</param>
+            <param name="isBigEndian">Endian Type - Big Endian by Default</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.#ctor(System.IO.Stream,System.Boolean)">
+            <summary>Initialize data stream viaI/O Stream</summary>
+            <param name="stream">TheI/O Stream</param>
+            <param name="isBigEndian">Endian Type - Big Endian by Default</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.#ctor(System.String,System.Boolean)">
+            <summary>Initialize File Reader and Writer by specifying file a valid file path</summary>
+            <param name="path">The file Path</param>
+            <param name="isBigEndian">Endian Type, Default is true</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.#ctor(System.String,System.Boolean,System.IO.FileShare)">
+            <summary>Initialize File Reader and Writer by specifying file a valid file path</summary>
+            <param name="path">The file Path</param>
+            <param name="isBigEndian">Endian Type, Default is true</param>
+            <param name="fileShare">The File Share Option</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadBytes(System.Int32)">
+            <summary>Reads a set size of bytes</summary>
+            <param name="length">The byte array length</param>
+            <returns>Byte Array</returns>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadBytes(System.Int32,System.Boolean)">
+            <summary>Reads a set size of bytes</summary>
+            <param name="length">The byte array length</param>
+            <param name="isBigEndien">Specifiy if read is in Big Endien Type</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadDouble">
+            <summary>Reads a 64-bit double (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadDouble(System.Boolean)">
+            <summary>Reads a 32-bit double (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadHexString(System.Int32)">
+            <summary>Reads Hex String</summary>
+            <param name="length">The amount of bytes to read</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt16">
+            <summary>Reads a 16-bit signed integer (2 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt16(System.Boolean)">
+            <summary>Reads a 16-bit signed integer (2 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt24">
+            <summary>Reads a 24-bit signed integer (3 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt24(System.Boolean)">
+            <summary>Reads a 24-bit signed integer (3 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt32">
+            <summary>Reads a 32-bit signed integer (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt32(System.Boolean)">
+            <summary>Reads a 32-bit signed integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt40">
+            <summary>Reads a 40-bit signed integer (5 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt40(System.Boolean)">
+            <summary>Reads a 40-bit signed integer (5 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt48">
+            <summary>Reads a 48-bit signed integer (6 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt48(System.Boolean)">
+            <summary>Reads a 48-bit signed integer (6 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt56">
+            <summary>Reads a 56-bit signed integer (7 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt56(System.Boolean)">
+            <summary>Reads a 56-bit signed integer (7 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt64">
+            <summary>Reads a 64-bit signed integer (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt64(System.Boolean)">
+            <summary>Reads a 64-bit signed integer (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadInt8">
+            <summary>Reads a 8-bit signed integer (1 byte)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadSingle">
+            <summary>Reads a 32-bit Float (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadSingle(System.Boolean)">
+            <summary>Reads a 32-bit signed integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadStream">
+            <summary>Reads all the bytes</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadString(Isolib.IOPackage.StringType,System.Int32)">
+            <summary>Reads String with specific string type</summary>
+            <param name="stringType">The Specified String type to read</param>
+            <param name="length">The byte length of the String to read</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt16">
+            <summary>Reads a 16-bit unsigned integer (2 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt16(System.Boolean)">
+            <summary>Reads a 16-bit unsigned integer (2 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt24">
+            <summary>Reads a 24-bit unsigned integer (3 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt24(System.Boolean)">
+            <summary>Reads a 24-bit unsigned integer (3 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt32">
+            <summary>Reads a 32-bit unsigned integer (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt32(System.Boolean)">
+            <summary>Reads a 32-bit unsigned integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt40">
+            <summary>Reads a 40-bit unsigned integer (5 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt40(System.Boolean)">
+            <summary>Reads a 40-bit unsigned integer (5 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt48">
+            <summary>Reads a 48-bit unsigned integer (6 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt48(System.Boolean)">
+            <summary>Reads a 48-bit unsigned integer (6 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt56">
+            <summary>Reads a 56-bit unsigned integer (7 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt56(System.Boolean)">
+            <summary>Reads a 56-bit unsigned integer (7 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt64">
+            <summary>Reads a 64-bit unsigned integer (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt64(System.Boolean)">
+            <summary>Reads a 64-bit unsigned integer (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.ReadUInt8">
+            <summary>Reads a 8-bit unsigned integer (1 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.SearchString(System.String,Isolib.IOPackage.StringType,System.Int64)">
+            <summary>Search data for specified string</summary>
+            <param name="value">The value you are searching for</param>
+            <param name="type">The string type of the value</param>
+            <param name="startposition">Position For Start Searching</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.SearchHexString(System.String,System.Boolean,System.Int64)">
+            <summary>Search the file stream for a specified Hex String</summary>
+            <param name="data">The data you want to search for</param>
+            <param name="firstFind">If you want to only search for the first location</param>
+            <param name="startPosition">Position For start Searching</param>
+            <returns>The long offset</returns>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.SearchHexString(System.String)">
+            <summary>Search the file stream for a specified Hex String</summary>
+            <param name="data">The data you want to search for</param>
+            <returns>The long offset</returns>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekBytes(System.Int32)">
+            <summary>Peeks a set size of bytes</summary>
+            <param name="length">The byte array length</param>
+            <returns>Byte Array</returns>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekBytes(System.Int32,System.Boolean)">
+            <summary>Peeks a set size of bytes</summary>
+            <param name="length">The byte array length</param>
+            <param name="isBigEndien">Specifiy if read is in Big Endien Type</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekDouble">
+            <summary>Peeks a 64-bit double (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekDouble(System.Boolean)">
+            <summary>Peeks a 32-bit double (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekHexString(System.Int32)">
+            <summary>Peeks Hex String</summary>
+            <param name="length">The amount of bytes to read</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt16">
+            <summary>Peeks a 16-bit signed integer (2 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt16(System.Boolean)">
+            <summary>Peeks a 16-bit signed integer (2 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt24">
+            <summary>Peeks a 24-bit signed integer (3 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt24(System.Boolean)">
+            <summary>Peeks a 24-bit signed integer (3 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt32">
+            <summary>Peeks a 32-bit signed integer (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt32(System.Boolean)">
+            <summary>Peeks a 32-bit signed integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt40">
+            <summary>Peeks a 40-bit signed integer (5 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt40(System.Boolean)">
+            <summary>Peeks a 40-bit signed integer (5 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt48">
+            <summary>Peeks a 48-bit signed integer (6 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt48(System.Boolean)">
+            <summary>Peeks a 48-bit signed integer (6 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt56">
+            <summary>Peeks a 56-bit signed integer (7 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt56(System.Boolean)">
+            <summary>Peeks a 56-bit signed integer (7 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt64">
+            <summary>Peeks a 64-bit signed integer (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt64(System.Boolean)">
+            <summary>Peeks a 64-bit signed integer (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekInt8">
+            <summary>Peeks a 8-bit signed integer (1 byte)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekSingle">
+            <summary>Peeks a 32-bit Float (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekSingle(System.Boolean)">
+            <summary>Peeks a 32-bit signed integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekString(Isolib.IOPackage.StringType,System.Int32)">
+            <summary>Peeks String with specific string type</summary>
+            <param name="stringType">The Specified String type to read</param>
+            <param name="length">The byte length of the String to read</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt16">
+            <summary>Peeks a 16-bit unsigned integer (2 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt16(System.Boolean)">
+            <summary>Peeks a 16-bit unsigned integer (2 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt24">
+            <summary>Peeks a 24-bit unsigned integer (3 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt24(System.Boolean)">
+            <summary>Peeks a 24-bit unsigned integer (3 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt32">
+            <summary>Peeks a 32-bit unsigned integer (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt32(System.Boolean)">
+            <summary>Peeks a 32-bit unsigned integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt40">
+            <summary>Peeks a 40-bit unsigned integer (5 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt40(System.Boolean)">
+            <summary>Peeks a 40-bit unsigned integer (5 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt48">
+            <summary>Peeks a 48-bit unsigned integer (6 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt48(System.Boolean)">
+            <summary>Peeks a 48-bit unsigned integer (6 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt56">
+            <summary>Peeks a 56-bit unsigned integer (7 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt56(System.Boolean)">
+            <summary>Peeks a 56-bit unsigned integer (7 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt64">
+            <summary>Peeks a 64-bit unsigned integer (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt64(System.Boolean)">
+            <summary>Peeks a 64-bit unsigned integer (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.PeekUInt8">
+            <summary>Peeks a 8-bit unsigned integer (1 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.Close">
+            <summary>Clears buffer by Flushing and Closes theI/O Stream</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.Dispose">
+            <summary>Release all resources used by reader and writer stream</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Reader.Flush">
+            <summary>Clears buffer for this stream and any unbuffered data will be written</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Reader.Accessed">
+            <summary>Set if current initialization is being accessed</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Reader.IsBigEndian">
+            <summary>Set/Get if current initialization is big endian</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Reader.LastPosition">
+            <summary>Get last position accessed</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Reader.Length">
+            <summary>Get/Set if current initialization length</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Reader.Position">
+            <summary>Get/Set if current initialization position</summary>
+        </member>
+        <member name="T:Isolib.IOPackage.Writer">
+            <summary>Contains function/s that deals with I/O writing of data</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.#ctor">
+            <summary>Makes a temporary file Stream</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.Write(System.String,System.Boolean)">
+            <param name="path">The file Path</param>
+            <param name="isBigEndian">Endian Type, Default is true</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.#ctor(System.IO.Stream)">
+            <summary>Initialize data stream viaI/O Stream</summary>
+            <param name="stream">TheI/O Stream</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.#ctor(System.Byte[])">
+            <summary>Initialize Array Streaming</summary>
+            <param name="byteArray">The Byte Array to Stream</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteBytes(System.Byte[])">
+            <summary>Writes a byte array to the underlying stream</summary>
+            <param name="buffer">A byte array containing the data to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteBytes(System.Byte[],System.Boolean)">
+            <summary>Writes a byte array to the underlying stream</summary>
+            <param name="buffer">A byte array containing the data to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>Writes a region of a byte array to the current stream</summary>
+            <param name="buffer">A byte array containing the data to write</param>
+            <param name="index">The starting point to start writing</param>
+            <param name="count">The amount of bytes to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteBytes(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+            <summary>Writes a region of a byte array to the current stream</summary>
+            <param name="buffer">A byte array containing the data to write</param>
+            <param name="index">The starting point to start writing</param>
+            <param name="count">The amount of bytes to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteDouble(System.Double)">
+            <summary>Writes a 64-bit double (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteDouble(System.Double,System.Boolean)">
+            <summary>Writes a 32-bit double (8 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteHexString(System.String)">
+            <summary>Writes Hex String</summary>
+            <param name="value">The hex string value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteHexString(System.String,System.Int32)">
+            <summary>Writes Hex String</summary>
+            <param name="value">The hex string value to write</param>
+            <param name="offset">The offset / index you want to write the hex string</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt16(System.Int16)">
+            <summary>Writes a 16-bit signed integer (2 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt16(System.Int16,System.Boolean)">
+            <summary>Writes a 16-bit signed integer (2 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt24(System.Int32)">
+            <summary>Writes a 24-bit signed integer (3 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt24(System.Int32,System.Boolean)">
+            <summary>Writes a 24-bit signed integer (3 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt32(System.Int32)">
+            <summary>Writes a 32-bit signed integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt32(System.Int32,System.Boolean)">
+            <summary>Writes a 32-bit signed integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt40(System.Int64)">
+            <summary>Writes a 40-bit signed integer (5 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt40(System.Int64,System.Boolean)">
+            <summary>Writes a 40-bit signed integer (5 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt48(System.Int64)">
+            <summary>Writes a 48-bit signed integer (6 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt48(System.Int64,System.Boolean)">
+            <summary>Writes a 48-bit signed integer (6 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt56(System.Int64)">
+            <summary>Writes a 56-bit signed integer (7 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt56(System.Int64,System.Boolean)">
+            <summary>Writes a 56-bit signed integer (7 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt64(System.Int64)">
+            <summary>Writes a 64-bit signed integer (8 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt64(System.Int64,System.Boolean)">
+            <summary>Writes a 64-bit signed integer (8 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteInt8(System.SByte)">
+            <summary>Write an 8-bit signed integer (1 byte)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteSingle(System.Single)">
+            <summary>Reads a 32-bit signed integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteString(System.String,Isolib.IOPackage.StringType,System.Int32)">
+            <summary>Reads String with specific string type</summary>
+            <param name="input">The value to write</param>
+            <param name="type">The Specified String type to read</param>
+            <param name="length">The byte length of the String to read</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt16(System.UInt16)">
+            <summary>Writes a 16-bit unsigned integer (2 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt16(System.UInt16,System.Boolean)">
+            <summary>Writes a 16-bit unsigned integer (2 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt24(System.UInt32)">
+            <summary>Writes a 24-bit unsigned integer (3 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt24(System.UInt32,System.Boolean)">
+            <summary>Writes a 24-bit unsigned integer (3 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt32(System.UInt32)">
+            <summary>Writes a 32-bit unsigned integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt32(System.UInt32,System.Boolean)">
+            <summary>Writes a 32-bit unsigned integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt40(System.UInt64)">
+            <summary>Writes a 40-bit unsigned integer (5 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt40(System.UInt64,System.Boolean)">
+            <summary>Writes a 40-bit unsigned integer (5 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt48(System.UInt64)">
+            <summary>Writes a 48-bit unsigned integer (6 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt48(System.UInt64,System.Boolean)">
+            <summary>Writes a 48-bit unsigned integer (6 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt56(System.UInt64)">
+            <summary>Writes a 56-bit unsigned integer (7 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt56(System.UInt64,System.Boolean)">
+            <summary>Writes a 56-bit unsigned integer (7 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt64(System.UInt64)">
+            <summary>Writes a 64-bit unsigned integer (8 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt64(System.UInt64,System.Boolean)">
+            <summary>Writes a 64-bit unsigned integer (8 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.WriteUInt8(System.Byte)">
+            <summary>Writes a 8-bit unsigned integer (1 byte)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.Close">
+            <summary>Clears buffer by Flushing and Closes theI/O Stream</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.Dispose">
+            <summary>Release all resources used by reader and writer stream</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.Writer.Flush">
+            <summary>Clears buffer for this stream and any unbuffered data will be written</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Writer.Accessed">
+            <summary>Set if current initialization is being accessed</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Writer.IsBigEndian">
+            <summary>Set/Get if current initialization is big endian</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Writer.LastPosition">
+            <summary>Get last position accessed</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Writer.Length">
+            <summary>Get/Set if current initialization length</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.Writer.Position">
+            <summary>Get/Set if current initialization position</summary>
+        </member>
+        <member name="T:Isolib.IOPackage.FileAndFolder">
+            <summary>Contains function/s that deals with files and folders</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.FileAndFolder.SimpleBackup(System.String,System.Boolean)">
+            <summary>Backup your file using .bk extension</summary>
+            <param name="path">The file path</param>
+            <param name="overwrite">overwrite the file if it currently exist</param>
+        </member>
+        <member name="M:Isolib.IOPackage.FileAndFolder.CreateDirectory(System.String)">
+            <summary>Create an empty folder in the current location</summary>
+            <param name="directoryName">The folder name</param>
+            <returns>A boolean value depending on how successful the operation was</returns>
+        </member>
+        <member name="T:Isolib.IOPackage.RWStream">
+            <summary>Contains function/s that deals with I/O reading and writing of Data</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.String)">
+            <summary>Initialize File Reader and Writer by specifying file a valid file path</summary>
+            <param name="path">The file Path</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.String,System.Boolean)">
+            <summary>Initialize File Reader and Writer by specifying file a valid file path</summary>
+            <param name="path">The file Path</param>
+            <param name="isBigEndian">Endian Type, Default is true</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.String,System.Boolean,System.IO.FileMode)">
+            <summary>Initialize File Reader and Writer by specifying file a valid file path</summary>
+            <param name="path">The file Path</param>
+            <param name="isBigEndian">Endian Type, Default is true</param>
+            <param name="fileMode">The File Mode</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.String,System.Boolean,System.IO.FileMode,System.IO.FileAccess)">
+            <summary>Initialize File Reader and Writer by specifying file a valid file path</summary>
+            <param name="path">The file Path</param>
+            <param name="isBigEndian">Endian Type, Default is true</param>
+            <param name="fileMode">The File Mode</param>
+            <param name="fileAccess">The File Access Option</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.String,System.Boolean,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)">
+            <summary>Initialize File Reader and Writer by specifying file a valid file path</summary>
+            <param name="path">The file Path</param>
+            <param name="isBigEndian">Endian Type, Default is true</param>
+            <param name="fileMode">The File Mode</param>
+            <param name="fileAccess">The File Access Option</param>
+            <param name="fileShare">The File Share Option</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadWriter(System.String,System.Boolean,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)">
+            <summary>Initialize File Reader and Writer by specifying file a valid file path</summary>
+            <param name="path">The file Path</param>
+            <param name="isBigEndian">Endian Type, Default is true</param>
+            <param name="theFileMode">The File Mode</param>
+            <param name="theFileAccess">The File Access Option</param>
+            <param name="theFileShare">The File Share Option</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.Byte[])">
+            <summary>Initialize Array Streaming</summary>
+            <param name="buffer">The Byte Array to Stream</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.Byte[],System.Boolean)">
+            <summary>Initialize Array Streaming</summary>
+            <param name="buffer">The Byte Array to Stream</param>
+            <param name="isBigEndian">Endian Type - Big Endian by Default</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.Byte[],System.Boolean,System.Boolean)">
+            <param name="buffer">The Byte Array to Stream</param>
+            <param name="writeable">If The Stream supports writing - True by Default</param>
+            <param name="isBigEndian">Endian Type - Big Endian by Default</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadWriteBuffer(System.Byte[],System.Boolean,System.Boolean)">
+            <summary>Initialize Array Streaming</summary>
+            <param name="byteArray">The Byte Array to Stream</param>
+            <param name="writeAble">If The Stream supports writing - True by Default</param>
+            <param name="isBigEndian">Endian Type - Big Endian by Default</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor">
+            <summary>Makes a temporary file Stream</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.#ctor(System.IO.Stream)">
+            <summary>Initialize data stream via I/O Stream</summary>
+            <param name="stream">TheI/O Stream</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.Close">
+            <summary>Clears buffer by Flushing and Closes theI/O Stream</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.Close(System.Boolean)">
+            <summary>
+            Compatibility overload for callers compiled against ISOLib 0.2.2.
+            The parameter is accepted for source compatibility; temporary files
+            are handled exactly as in <see cref="M:Isolib.IOPackage.RWStream.Close"/>.
+            </summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.Flush">
+            <summary>Clears buffer for this stream and any unbuffered data will be written</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadBytes(System.Int32)">
+            <summary>Reads a set size of bytes</summary>
+            <param name="length">The byte array length</param>
+            <returns>Byte Array</returns>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadBytes(System.Int32,System.Boolean)">
+            <summary>Reads a set size of bytes</summary>
+            <param name="length">The byte array length</param>
+            <param name="isBigEndien">Specifiy if read is in Big Endien Type</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadDouble">
+            <summary>Reads a 64-bit double (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadDouble(System.Boolean)">
+            <summary>Reads a 32-bit double (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadHexString(System.Int32)">
+            <summary>Reads Hex String</summary>
+            <param name="length">The amount of bytes to read</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt16">
+            <summary>Reads a 16-bit signed integer (2 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt16(System.Boolean)">
+            <summary>Reads a 16-bit signed integer (2 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt24">
+            <summary>Reads a 24-bit signed integer (3 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt24(System.Boolean)">
+            <summary>Reads a 24-bit signed integer (3 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt32">
+            <summary>Reads a 32-bit signed integer (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt32(System.Boolean)">
+            <summary>Reads a 32-bit signed integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt40">
+            <summary>Reads a 40-bit signed integer (5 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt40(System.Boolean)">
+            <summary>Reads a 40-bit signed integer (5 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt48">
+            <summary>Reads a 48-bit signed integer (6 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt48(System.Boolean)">
+            <summary>Reads a 48-bit signed integer (6 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt56">
+            <summary>Reads a 56-bit signed integer (7 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt56(System.Boolean)">
+            <summary>Reads a 56-bit signed integer (7 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt64">
+            <summary>Reads a 64-bit signed integer (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt64(System.Boolean)">
+            <summary>Reads a 64-bit signed integer (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadInt8">
+            <summary>Reads a 8-bit signed integer (1 byte)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadSingle">
+            <summary>Reads a 32-bit Float (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadSingle(System.Boolean)">
+            <summary>Reads a 32-bit signed integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadStream">
+            <summary>Reads all the bytes</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadString(Isolib.IOPackage.StringType,System.Int32)">
+            <summary>Reads String with specific string type</summary>
+            <param name="stringType">The Specified String type to read</param>
+            <param name="length">The byte length of the String to read</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt16">
+            <summary>Reads a 16-bit unsigned integer (2 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt16(System.Boolean)">
+            <summary>Reads a 16-bit unsigned integer (2 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt24">
+            <summary>Reads a 24-bit unsigned integer (3 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt24(System.Boolean)">
+            <summary>Reads a 24-bit unsigned integer (3 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt32">
+            <summary>Reads a 32-bit unsigned integer (4 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt32(System.Boolean)">
+            <summary>Reads a 32-bit unsigned integer (4 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt40">
+            <summary>Reads a 40-bit unsigned integer (5 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt40(System.Boolean)">
+            <summary>Reads a 40-bit unsigned integer (5 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt48">
+            <summary>Reads a 48-bit unsigned integer (6 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt48(System.Boolean)">
+            <summary>Reads a 48-bit unsigned integer (6 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt56">
+            <summary>Reads a 56-bit unsigned integer (7 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt56(System.Boolean)">
+            <summary>Reads a 56-bit unsigned integer (7 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt64">
+            <summary>Reads a 64-bit unsigned integer (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt64(System.Boolean)">
+            <summary>Reads a 64-bit unsigned integer (8 bytes)</summary>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.ReadUInt8">
+            <summary>Reads a 8-bit unsigned integer (1 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.SearchString(System.String,Isolib.IOPackage.StringType)">
+            <summary>Search data for specified string</summary>
+            <param name="value">The value you are searching for</param>
+            <param name="type">The string type of the value</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.SearchHexString(System.String,System.Boolean)">
+            <summary>Search the file stream for a specified Hex String</summary>
+            <param name="data">The data you want to search for</param>
+            <param name="firstFind">If you want to only search for the first location</param>
+            <returns>The long offset</returns>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.SearchHexString(System.String,System.Int64,System.Boolean)">
+            <summary>Search the file stream for a specified Hex String</summary>
+            <param name="data">The data you want to search for</param>
+            <param name="startoffset">The starting offset </param>
+            <param name="firstFind">If you want to only search for the first location</param>
+            <returns>The long offset</returns>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.SearchHexString(System.String)">
+            <summary>Search the file stream for a specified Hex String</summary>
+            <param name="data">The data you want to search for</param>
+            <returns>The long offset</returns>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteBytes(System.Byte[])">
+            <summary>Writes a byte array to the underlying stream</summary>
+            <param name="buffer">A byte array containing the data to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteBytes(System.Byte[],System.Boolean)">
+            <summary>Writes a byte array to the underlying stream</summary>
+            <param name="buffer">A byte array containing the data to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>Writes a region of a byte array to the current stream</summary>
+            <param name="buffer">A byte array containing the data to write</param>
+            <param name="index">The starting point to start writing</param>
+            <param name="count">The amount of bytes to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteBytes(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+            <summary>Writes a region of a byte array to the current stream</summary>
+            <param name="buffer">A byte array containing the data to write</param>
+            <param name="index">The starting point to start writing</param>
+            <param name="count">The amount of bytes to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteDouble(System.Double)">
+            <summary>Writes a 64-bit double (8 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteDouble(System.Double,System.Boolean)">
+            <summary>Writes a 32-bit double (8 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteHexString(System.String)">
+            <summary>Writes Hex String</summary>
+            <param name="value">The hex string value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteHexString(System.String,System.Int32)">
+            <summary>Writes Hex String</summary>
+            <param name="value">The hex string value to write</param>
+            <param name="offset">The offset / index you want to write the hex string</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt16(System.Int16)">
+            <summary>Writes a 16-bit signed integer (2 bytes)</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt16(System.Int16,System.Boolean)">
+            <summary>Writes a 16-bit signed integer (2 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt24(System.Int32)">
+            <summary>Writes a 24-bit signed integer (3 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt24(System.Int32,System.Boolean)">
+            <summary>Writes a 24-bit signed integer (3 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt32(System.Int32)">
+            <summary>Writes a 32-bit signed integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt32(System.Int32,System.Boolean)">
+            <summary>Writes a 32-bit signed integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt40(System.Int64)">
+            <summary>Writes a 40-bit signed integer (5 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt40(System.Int64,System.Boolean)">
+            <summary>Writes a 40-bit signed integer (5 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt48(System.Int64)">
+            <summary>Writes a 48-bit signed integer (6 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt48(System.Int64,System.Boolean)">
+            <summary>Writes a 48-bit signed integer (6 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt56(System.Int64)">
+            <summary>Writes a 56-bit signed integer (7 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt56(System.Int64,System.Boolean)">
+            <summary>Writes a 56-bit signed integer (7 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt64(System.Int64)">
+            <summary>Writes a 64-bit signed integer (8 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt64(System.Int64,System.Boolean)">
+            <summary>Writes a 64-bit signed integer (8 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteInt8(System.SByte)">
+            <summary>Write an 8-bit signed integer (1 byte)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteSingle(System.Single)">
+            <summary>Reads a 32-bit signed integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteString(System.String,Isolib.IOPackage.StringType,System.Int32)">
+            <summary>Reads String with specific string type</summary>
+            <param name="input">The value to write</param>
+            <param name="type">The Specified String type to read</param>
+            <param name="length">The byte length of the String to read</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt16(System.UInt16)">
+            <summary>Writes a 16-bit unsigned integer (2 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt16(System.UInt16,System.Boolean)">
+            <summary>Writes a 16-bit unsigned integer (2 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt24(System.UInt32)">
+            <summary>Writes a 24-bit unsigned integer (3 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt24(System.UInt32,System.Boolean)">
+            <summary>Writes a 24-bit unsigned integer (3 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt32(System.UInt32)">
+            <summary>Writes a 32-bit unsigned integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt32(System.UInt32,System.Boolean)">
+            <summary>Writes a 32-bit unsigned integer (4 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt40(System.UInt64)">
+            <summary>Writes a 40-bit unsigned integer (5 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt40(System.UInt64,System.Boolean)">
+            <summary>Writes a 40-bit unsigned integer (5 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt48(System.UInt64)">
+            <summary>Writes a 48-bit unsigned integer (6 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt48(System.UInt64,System.Boolean)">
+            <summary>Writes a 48-bit unsigned integer (6 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt56(System.UInt64)">
+            <summary>Writes a 56-bit unsigned integer (7 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt56(System.UInt64,System.Boolean)">
+            <summary>Writes a 56-bit unsigned integer (7 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt64(System.UInt64)">
+            <summary>Writes a 64-bit unsigned integer (8 bytes)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt64(System.UInt64,System.Boolean)">
+            <summary>Writes a 64-bit unsigned integer (8 bytes)</summary>
+            <param name="value">The value to write</param>
+            <param name="isBigEndian">If the Endien type is Big</param>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.WriteUInt8(System.Byte)">
+            <summary>Writes a 8-bit unsigned integer (1 byte)</summary>
+            <param name="value">The value to write</param>
+        </member>
+        <member name="P:Isolib.IOPackage.RWStream.Accessed">
+            <summary>Set if current initialization is being accessed</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.RWStream.IsBigEndian">
+            <summary>Set/Get if current initialization is big endian</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.RWStream.LastPosition">
+            <summary>Get last position accessed</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.RWStream.Length">
+            <summary>Get/Set if current initialization length</summary>
+        </member>
+        <member name="P:Isolib.IOPackage.RWStream.Position">
+            <summary>Get/Set if current initialization position</summary>
+        </member>
+        <member name="M:Isolib.IOPackage.RWStream.Dispose">
+            <summary>Release all resources used by reader and writer stream</summary>
+        </member>
+        <member name="T:Isolib.IOPackage.StringType">
+            <summary>The String type enumeration</summary>
+        </member>
+        <member name="F:Isolib.IOPackage.StringType.Ascii">
+            <summary>This is Ascii character type</summary>
+        </member>
+        <member name="F:Isolib.IOPackage.StringType.Unicode">
+            <summary>This is Unicode character type</summary>
+        </member>
+        <member name="T:Isolib.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Isolib.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Isolib.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Isolib.Properties.Resources.KV">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:Isolib.Properties.Resources.noImage">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:isolib.XBDMPackage.RealTimeMemory">
+            <summary>Xbox 360 Real Time Memory Access Class using xbdm
+            NB: Large dump speed depends on the version of xbdm you have</summary>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.#ctor(System.String)">
+            <summary>RealTimeMemory constructor Example: Default start dump = "0xC0000000" and length = "0x1FFFFFFF"</summary>
+            <param name="ipAddress">The IP address</param>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.#ctor(System.String,System.String,System.String)">
+            <summary>RealTimeMemory constructor Example: Default start dump = "0xC0000000" and length = "0x1FFFFFFF"</summary>
+            <param name="ipAddress">The IP address</param>
+            <param name="startDumpOffset">The start dump address</param>
+            <param name="startDumpLength">The dump length</param>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.#ctor(System.String,System.UInt32,System.UInt32)">
+            <summary>RealTimeMemory constructor Example: Default start dump = 0xC0000000 and length = 0x1FFFFFFF</summary>
+            <param name="ipAddress">The IP address</param>
+            <param name="startDumpOffset">The start dump address</param>
+            <param name="startDumpLength">The dump length</param>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Connect">
+            <summary>Connect to the  using port 730 using the given ip address</summary>
+            <returns>True if connection was successful and False if not</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Connect(System.Int32)">
+            <summary>Connect to the </summary>
+            <param name="port">The port to use Example: 730</param>
+            <returns>True if connection was successful and False if not</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Poke(System.String,System.String)">
+            <summary>Poke the Memory</summary>
+            <param name="memoryAddress">The memory addess to Poke Example:0xCEADEADE - Uses *.FindOffset</param>
+            <param name="value">The value to poke Example:000032FF (hex string)</param>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Poke(System.UInt32,System.String)">
+            <summary>Poke the Memory</summary>
+            <param name="memoryAddress">The memory addess to Poke Example:0xCEADEADE - Uses *.FindOffset</param>
+            <param name="value">The value to poke Example:000032FF (hex string)</param>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Peek(System.String,System.String)">
+            <summary>Peek into the Memory</summary>
+            <param name="memoryAddress">The memory addess to Peek Example:0xCEADEADE - Uses *.FindOffset</param>
+            <param name="peekSize">The byte size to peek Example: "0x4" or "4"</param>
+            <returns>Return the hex string of the value</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Peek(System.String,System.Int32)">
+            <summary>Peek into the Memory</summary>
+            <param name="memoryAddress">The memory addess to Peek Example:0xCEADEADE - Uses *.FindOffset</param>
+            <param name="peekSize">The byte size to peek Example: "0x4" or "4"</param>
+            <returns>Return the hex string of the value</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Peek(System.UInt32,System.Int32)">
+            <summary>Peek into the Memory</summary>
+            <param name="memoryAddress">The memory addess to Peek Example:0xCEADEADE - Uses *.FindOffset</param>
+            <param name="peekSize">The byte size to peek Example: "0x4" or "4"</param>
+            <returns>Return the hex string of the value</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Peek(System.String,System.String,System.String,System.String)">
+            <summary>Peek into the Memory</summary>
+            <param name="startDumpAddress">The Hex offset to start dump Example:0xC0000000 </param>
+            <param name="dumpLength">The Length or size of dump Example:0xFFFFFF </param>
+            <param name="memoryAddress">The memory address to peek Example:0xC5352525 </param>
+            <param name="peekSize">The byte size to peek Example: "0x4" or "4"</param>
+            <returns>Return the hex string of the value</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Peek(System.UInt32,System.UInt32,System.UInt32,System.Int32)">
+            <summary>Peek into the Memory</summary>
+            <param name="startDumpAddress">The Hex offset to start dump Example:0xC0000000 </param>
+            <param name="dumpLength">The Length or size of dump Example:0xFFFFFF </param>
+            <param name="memoryAddress">The memory address to peek Example:0xC5352525 </param>
+            <param name="peekSize">The byte size to peek Example: "0x4" or "4"</param>
+            <returns>Return the hex string of the value</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.PeekBytes(System.String,System.String,System.String,System.String)">
+            <summary>Peek into the Memory</summary>
+            <param name="startDumpAddress">The Hex offset to start dump Example:0xC0000000 </param>
+            <param name="dumpLength">The Length or size of dump Example:0xFFFFFF </param>
+            <param name="memoryAddress">The memory address to peek Example:0xC5352525 </param>
+            <param name="peekSize">The byte size to peek Example: "0x4" or "4"</param>
+            <returns>Return the byte[] of the value</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.PeekBytes(System.UInt32,System.UInt32,System.UInt32,System.Int32)">
+            <summary>Peek into the Memory</summary>
+            <param name="startDumpAddress">The Hex offset to start dump Example:0xC0000000 </param>
+            <param name="dumpLength">The Length or size of dump Example:0xFFFFFF </param>
+            <param name="memoryAddress">The memory address to peek Example:0xC5352525 </param>
+            <param name="peekSize">The byte size to peek Example: "0x4" or "4"</param>
+            <returns>Return the byte[] of the value</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.FindHexOffset(System.String)">
+            <summary>Find the address of a pointer from the start dump offset</summary>
+            <param name="pointer">The hex string of the pointer Example: 821122114455EEFF000000</param>
+            <returns>Returns and array of the address or all address where the pointer was found</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.FindUIntOffset(System.String)">
+            <summary>Find the address of a pointer from the start dump offset</summary>
+            <param name="pointer">The hex string of the pointer Example: 821122114455EEFF000000</param>
+            <returns>Returns and array of the address or all address where the pointer was found</returns>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.StreamDump">
+            <summary>Dump  memory into a temporary file which will be used to peek and poke</summary>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.StopCommand">
+            <summary>Send a freeze command to the xbox</summary>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.StartCommand">
+            <summary>Send a start command to the xbox</summary>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Dump(System.String,System.String,System.String)">
+            <summary>Dump memory to a specified file path</summary>
+            <param name="filename">The file path</param>
+            <param name="startDumpAddress">The starting offset/address</param>
+            <param name="dumpLength">The dump length</param>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.Dump(System.String,System.UInt32,System.UInt32)">
+            <summary>Dump memory to a specified file path</summary>
+            <param name="filename">The file path</param>
+            <param name="startDumpAddress">The starting offset/address</param>
+            <param name="dumpLength">The dump length</param>
+        </member>
+        <member name="P:isolib.XBDMPackage.RealTimeMemory.IPAddress">
+            <summary>Set or Get the IPAddress</summary>
+        </member>
+        <member name="P:isolib.XBDMPackage.RealTimeMemory.DumpOffset">
+            <summary>Set or Get the start dump offset</summary>
+        </member>
+        <member name="P:isolib.XBDMPackage.RealTimeMemory.DumpLength">
+            <summary>Set or Get the dump length</summary>
+        </member>
+        <member name="P:isolib.XBDMPackage.RealTimeMemory.StreamDumpFlag">
+            <summary>Checks if you are using the stream dump</summary>
+        </member>
+        <member name="M:isolib.XBDMPackage.RealTimeMemory.CloseStreamDump">
+            <summary>Close the Stream Dump if used</summary>
+        </member>
+    </members>
+</doc>
